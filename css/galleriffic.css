@@ -103,12 +103,12 @@ div.portfolio-content {
   background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, white);
   background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, white);
   background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, white);
-  -webkit-border-radius: 60px / 5px;
+  -webkit-border-radius: 60px 5px;
   -moz-border-radius: 60px / 5px;
   border-radius: 60px / 5px;
-  -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
-  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset; }
+  -webkit-box-shadow: inset 0px 0px 35px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0px 0px 35px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 0px 35px 0 rgba(0, 0, 0, 0.1); }
   div.portfolio-content a {
     text-decoration: none;
     color: #777; }
@@ -188,7 +188,7 @@ div.portfolio-content:after {
     text-align: left; } }
 
 div.loader {
-  background-image: url(/js/nivoslider/dark/loading.gif);
+  background-image: url('../img/nivoslider/loading.gif');
   background-repeat: no-repeat;
   background-position: center;
   width: 550px;
