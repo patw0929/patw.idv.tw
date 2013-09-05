@@ -1,0 +1,24 @@
+{
+    "files": [
+        {
+            "source": "../img/bg1.jpg",
+            "type": "IMAGE",
+            "size": 150528
+        },
+        {
+            "source": "../img/bg2.jpg",
+            "type": "IMAGE",
+            "size": 171008
+        },
+        {
+            "source": "../img/bg3.jpg",
+            "type": "IMAGE",
+            "size": 155648
+        },
+        {
+            "source": "../img/bg4.jpg",
+            "type": "IMAGE",
+            "size": 164864
+        }
+    ]
+}

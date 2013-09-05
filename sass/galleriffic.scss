@@ -1,0 +1,612 @@
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+$experimental-support-for-svg: true;
+$mainImageWidth:550px;
+
+@import "portfolio/*.png";
+@include all-portfolio-sprites;
+
+@mixin resize-sprite($map, $sprite, $resizeWidth, $resizeHeight, $paddingOffset) {
+  $spritePath:    sprite-path($map);
+  $spriteWidth:   image-width($spritePath);
+  $spriteHeight:  image-height($spritePath);
+  $width: image-width(sprite-file($map, $sprite));
+  $height: image-height(sprite-file($map, $sprite));
+  $radio: 2.5; //($height/$resizeHeight);
+ 
+  @include background-size(#{$resizeWidth}px);
+  width: #{$resizeWidth}px;
+  height: #{$resizeHeight}px;
+  background-position: #{$paddingOffset}px ( floor(nth(sprite-position($map, $sprite), 2)) / $radio ) + $paddingOffset;
+}
+
+@import "compass/utilities/text/replacement";
+
+
+
+
+
+/*------------------------------------*\
+    $gallery-container
+
+    包覆作品展示區塊
+\*------------------------------------*/
+#gallery-container {
+	width: 1100px;
+	margin: 60px auto;
+
+	@media screen and (max-width: 1200px) {
+		width:100%;
+	}
+}
+
+
+
+
+
+/*------------------------------------*\
+    $portfolio-content
+
+    作品主圖 與 簡介
+\*------------------------------------*/
+div.portfolio-content { 
+	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+	display: none;
+	float: right;
+	width: $mainImageWidth; 
+    background: #fff;
+    border: 1px solid #ccc;
+    position:relative;
+    padding: 5px 0 ;
+    background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
+    background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+    background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+    background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, #fff);
+    -webkit-border-radius: 60px / 5px;
+    -moz-border-radius: 60px / 5px;
+    border-radius:60px / 5px;
+    -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+
+	a {
+		text-decoration: none;
+		color: #777;
+
+		&:focus, &:hover, &:active {
+			text-decoration: underline;
+		}		
+	}
+
+	@media screen and (max-width: 1200px) {	
+		float: none;
+		margin: 30px auto;
+	}
+
+	@media screen and (max-width: 910px) {	
+		width: 90%;
+		border: 0;
+		background: transparent;
+		padding: 0;
+		@include box-shadow(none);
+	}
+}
+
+	div.portfolio-content:before {
+        content: '';
+        width: 50px;
+        height: 50px;
+        top:0; right:0;
+        position:absolute;
+        display: inline-block;
+        z-index:-1;
+        -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+        -webkit-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+        -moz-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);
+        -o-transform: rotate(2deg) translate(-14px,20px) skew(-20deg);    
+        transform: rotate(2deg) translate(-14px,20px) skew(-20deg);  
+
+		@media screen and (max-width: 910px) {
+			display: none;
+		}
+	}
+
+	div.portfolio-content:after {
+        content: '';
+        width: 100px;
+        height: 100px;
+        top:0; left:0;
+        position:absolute;
+        z-index:-1;
+        display: inline-block;
+        -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+        -webkit-transform: rotate(2deg) translate(20px,25px) skew(20deg);
+        -moz-transform: rotate(2deg) translate(20px,25px) skew(20deg);    
+        -o-transform: rotate(2deg) translate(20px,25px) skew(20deg);    
+        transform: rotate(2deg) translate(20px,25px) skew(20deg);
+        
+		@media screen and (max-width: 910px) {
+			display: none;
+		}  
+	}
+
+	div.portfolio-content a {
+		@media screen and (max-width: 910px) {
+			width: 32px;
+		    height: 32px;
+		}
+	}
+
+	/*------------------------------------*\
+	    $slideshow-container
+
+	    主圖容器
+	\*------------------------------------*/
+	div.slideshow-container {
+		@media screen and (max-width: 1200px) {
+			text-align: center;
+		}
+
+		@media screen and (max-width: 910px) {
+			height: auto;
+		    margin-bottom: 30px;
+		    text-align:left;
+		}
+	}
+
+	div.loader {
+		background-image: image-url('/js/nivoslider/dark/loading.gif', false, false);
+		background-repeat: no-repeat;
+		background-position: center;
+		width: $mainImageWidth;
+		height: 400px; /* This should be set to be at least the height of the largest image in the slideshow */
+	}
+
+	div.slideshow {
+
+		span.image-wrapper {
+			display: block;
+		}
+
+		a.advance-link {
+			display: block;
+			width: $mainImageWidth;
+
+			&:hover, &:active, &:visited {
+				text-decoration: none;	
+			}
+
+			@media screen and (max-width: 1200px) {
+				width:auto;
+			}
+
+			@media screen and (max-width: 910px) {
+		    	height: auto;
+		    }
+		}
+
+		img {
+			width: #{$mainImageWidth - 20px};
+			max-height: 394px;
+			vertical-align: middle;
+			border: 1px solid #ccc;
+			margin: 10px;
+		}
+
+		@media screen and (max-width: 910px) {
+			text-align: center;
+
+			img {
+		    	width: 90%;
+		    	max-width: 580px;
+		    	height: auto;
+		    }
+		}
+	}
+
+	/*------------------------------------*\
+	    $caption-container
+
+	    簡介容器
+	\*------------------------------------*/
+	div.caption-container {
+		
+		font-size: 9pt;
+		margin: 0 auto 20px;
+
+		@media screen and (max-width: 1200px) {
+			width:100%;
+		}
+
+		@media screen and (max-width: 910px) {
+		    width: 90%;
+		    @include border-radius(10px);
+			background: #fff;
+		}
+	}
+
+	span.image-caption {
+		display: block;
+		width: $mainImageWidth;
+
+		@media screen and (max-width: 1200px) {
+			width: 100%;
+		}
+	}
+
+	div.caption {
+		padding: 12px;
+	}
+
+	div.image-title {
+		font-weight: bold;
+		font-size: 1.4em;
+		background-color: #C2C2A7;
+		line-height: 2em;
+		border-radius: 7px;
+		padding-left: 10px;
+
+		@media screen and (max-width: 910px) {
+			background-color: transparent;
+			line-height: inherit;
+			@include border-radius(none);
+			padding-left: 0;
+		}
+	}
+
+	div.image-desc {
+		line-height: 1.7em;
+		padding-top: 12px;
+		display: block;
+
+		@media screen and (max-width: 320px) {
+			display: none;
+		}
+	}
+
+
+
+
+
+/*------------------------------------*\
+    $navigation
+
+    縮圖列表
+\*------------------------------------*/
+div.navigation {
+	float: left;
+	width: 40%;
+
+	@media screen and (max-width: 1200px) {
+		width:90%;
+		float:none;
+		margin:0 auto;
+	}
+}
+
+	div.navigation a.thumb {
+		text-decoration: none;
+		color: #777;
+		@include hide-text;
+
+		@media screen and (max-width: 910px) {
+			width: 32px;
+		    height: 32px;
+
+			@each $sprite in sprite_names($portfolio-sprites) {
+				&.portfolio-#{$sprite} {
+					@include resize-sprite($portfolio-sprites, $sprite, 32, 32, 3);
+				}
+			}
+		}
+	}
+
+	@each $sprite in sprite_names($portfolio-sprites) {
+		.ie8 div.navigation a.thumb.portfolio-#{$sprite} {
+			background: none;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/#{$sprite}.png',sizingMethod='scale');
+			-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/#{$sprite}.png',sizingMethod='scale')";
+		}
+	}
+
+	ul.thumbs {
+		clear: both;
+		margin: 0;
+		padding: 0;
+	}
+	ul.thumbs li {
+		float: left;
+		padding: 0;
+		margin: 5px 10px 5px 0;
+		list-style: none;
+	}
+	a.thumb {
+		padding: 3px;
+		display: block;
+		width: 75px;
+		height: 75px;
+		border: 1px solid #ccc;
+		@include background-clip(content-box);
+		@include single-transition(all, .2s, ease-in-out);
+	}
+
+	ul.thumbs li.selected a.thumb {
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			@include rotate(-10deg);
+		}
+	}
+
+	ul.thumbs img {
+		border: none;
+		display: block;
+		width: 80px;
+		height: 80px;
+
+		@media screen and (max-width: 910px) {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+
+
+
+
+/*------------------------------------*\
+    $section_work
+
+    作品燈箱
+\*------------------------------------*/
+#section_work {
+	left: 0;
+	position: absolute;
+	display: none;
+	top: 20px;
+	width: 100%;
+	z-index: 1111;
+}
+	#loading {
+		display: none;
+		float: left;
+		height: 637px;
+		width: 100%;
+	}
+	.work_wrapper {
+		margin: 0 auto;
+		@include border-radius(20px);
+		@include single-box-shadow(rgba(255,255,255,.3), 0, 0, 25px);
+		width: 85%;
+		max-width: 915px;
+		display: none;
+
+		@media screen and (max-width: 910px) {
+			width: 100%;
+		}
+	}
+
+	#work_wrapper_ajax
+	{
+		background-color: #222;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+		@include single-box-shadow(#ccc, 0, 0, 20px);
+		@include clearfix;
+	}
+	
+	#link_desc {
+		float: left;
+		width: $mainImageWidth;
+		padding: 20px;
+
+		p {
+			font-size: 10pt;
+			color: #9E9C9C;
+			letter-spacing: 3px;
+		}
+
+		em {
+			color: #79e81e;
+			font-style: normal;
+		}
+
+		.work_link {
+			color: #FFF;
+			font-size: 10pt;
+			display: inline-block;
+			margin-bottom: 15px;
+			@include box-shadow(0 10px 0 #823a17, 0 15px 20px rgba(0, 0, 0, .5));
+			@include border-radius(10px);
+			@include box-shadow(0 8px 0 #823a17, 0 15px 20px rgba(0, 0, 0, .5));
+			@include single-transition(all, .2s, east-in-out);
+
+			span {
+				display: inline-block;
+				padding: 10px 15px;
+				line-height: 1;
+				background: #bb5422;
+				@include background-image(linear-gradient(#FA8246, #BB5422));
+				@include border-radius(10px);
+				@include single-transition(all, .2s, east-in-out);
+				@include single-box-shadow(inset, 0, -1px, 1px, rgba(255, 255, 255, .10));
+				@include single-text-shadow(rgba(19, 65, 88, .8), 0, -1px, 1px);
+			}
+
+			&:active {
+			  	@include single-transition(transform, 0s, ease-in-out);
+
+			  	span {
+					@include single-transition(transform, 0s, ease-in-out);
+					@include translate(0, 4px);
+				}
+			}
+		}
+
+		@media screen and (max-width: 910px) {
+			float: left;
+			margin: 0 auto;
+			width: 60%;
+		}
+
+		@media screen and (max-width: 800px) {
+			float: none;
+			margin: 0 auto;
+			width: 90%;
+		}
+	}
+
+	#work_desc
+	{
+		float: right;
+		width: 270px;
+		color: #9E9C9C;
+		overflow: auto;
+		position: relative;
+		margin-top: 40px;
+
+		h3 {
+			background: #FA8246;
+			@include background-image(linear-gradient(#FA8246, #bb5422));
+			@include border-top-left-radius(10px);
+			@include border-bottom-left-radius(10px);
+			color: #FFF;
+			vertical-align: middle;
+			padding: 10px 0 10px 10px;
+			@include single-text-shadow(#000, -1px, 1px, 1px);
+
+			@media screen and (max-width: 320px) {
+				font-size: 1em;
+				padding-bottom: 0;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				margin-bottom: 10px;
+			}
+		}
+
+		strong {
+			background: #FA8246;
+			@include background-image(linear-gradient(#FA8246, #bb5422));
+			@include border-top-left-radius(10px);
+			@include border-bottom-left-radius(10px);
+			padding: 4px 10px;
+			color: #FFF;
+			@include single-text-shadow(#000, -1px, 1px, 1px);
+			letter-spacing: 2px;
+			width: 25%;
+			display: block;
+			float: left;
+		}
+
+		span {
+			display: block;
+			padding: 4px 10px;
+			background: #FFF;
+			width: 60%;
+			float: left;
+			margin-bottom: 10px;
+		}
+
+		select {
+			width: 100%;
+		}
+
+		.work_link
+		{
+			color: #2d8ce2;
+			font-size: 11pt;
+			font-weight: bold;
+			line-height: 21px;
+			position: absolute;
+			right: 30px;
+			top: 50px;
+			z-index: 50;
+		}
+
+		a:hover
+		{
+			color: #FFF;
+		}
+
+		@media screen and (max-width: 1200px) {
+			width: 30%;
+			padding: 0;
+			font-size: 9pt;
+			float: right;
+			strong {
+				@include border-radius(10px);
+			}
+
+			span {
+				background: none;
+			}
+
+			.work_link {
+				display: none;
+			}
+		}
+
+		@media screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	#work_desc_txt
+	{
+		font-size: 10pt;
+		letter-spacing: 3px;
+
+		@media screen and (max-width: 910px) {
+			width: 100%;
+			font-size: 9pt;
+		}
+	}
+
+	.pro_link_wrap
+	{
+		float: left;
+		width: $mainImageWidth;
+	}
+
+	#btn_close
+	{
+		background: image-url('/img/close.png') bottom;
+		display: block;
+		float: right;
+		height: 31px;
+		position: absolute;
+		right: 20px;
+		text-indent: -9999px;
+		bottom: 20px;
+		width: 35px;
+		z-index: 50;
+
+		&:hover
+		{
+			background-position: top;
+		}
+
+		@media screen and (max-width: 910px) {
+			float: left;
+			right: auto;
+			top: 20px;
+			bottom: auto;
+			left: 20px;
+		}
+	}

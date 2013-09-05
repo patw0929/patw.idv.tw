@@ -1,0 +1,115 @@
+[{
+    "id": "024",
+    "title": "PARTNER STUDIO",
+    "description": "<strong>技術:</strong> Responsive Web Design, jQuery, Backbone.js, CSS3, SCSS<br />"
+},
+{
+    "id": "022",
+    "title": "極水感女神生死鬥，超級評審妳來做！",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> Biotherm, <strong>擔任:</strong> 前後端程式設計、CSS Layout<br /><strong>參與技術:</strong> CSS, jQuery, Facebook JS/C# SDK, ASP.NET(C#), ORM: PetaPoco<br />"
+},
+{
+    "id": "021",
+    "title": "美國運通信用白金卡",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 美國運通, <strong>擔任:</strong> CSS Layout 支援、前後端程式設計<br /><strong>參與技術:</strong> CSS, jQuery, ASP.NET(C#)<br />"
+},
+{
+    "id": "017",
+    "title": "台灣大哥大行動智慧雲",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 台灣大哥大, <strong>擔任:</strong> 新技術運用評估與試做 Prototype、程式設計<br /><strong>參與技術:</strong> Nodejs, Microsoft Speech SDK, ActionScript 3,  Facebook JS SDK, ASP.NET(C#), jQuery, 手機版網頁<br />"
+},
+{
+    "id": "001",
+    "title": "卡尼爾 Takecare 愛關懷",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 卡尼爾, <strong>擔任:</strong> 新技術運用評估與試做、程式設計<br /><strong>參與技術:</strong> Nodejs, ActionScript 3, ASP.NET(C#), jQuery, 手機版網頁<br /><strong>獲得獎項:</strong><select style='width: 70%;'><option>35屆時報華文廣告金像獎-網路數位廣告類網站/微型-銀像獎</option><option>35屆時報華文廣告金像獎-網路數位廣告類數位網路-銅像獎</option><option>2012 4A Yahoo!創意獎 最佳網路創新運用形式獎-佳作</option><option>2012 4A Yahoo!創意獎 最佳互動網路活動獎-佳作</option></select>"
+},
+{
+    "id": "002",
+    "title": "永豐學堂",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 永豐金證券, <strong>擔任:</strong> 程式設計、SD 文件撰寫<br /><strong>參與技術:</strong> ASP.NET(VB.NET), jQuery, 多權限前後台CMS, 加點升級機制, Blog, 仿 iGoogle 個人化拖拉介面"
+},
+{
+    "id": "003",
+    "title": "白蘭氏健康販賣機",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 白蘭氏, <strong>擔任:</strong> Winform 程式設計<br /><strong>參與技術:</strong> VB.NET (Winform), 販賣機 PLC 硬體串接與通訊, Flash 與 Winform 通訊"
+},
+{
+    "id": "004",
+    "title": "雲門 Love Share 愛分享",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 雲門舞蹈教室, <strong>擔任:</strong> 程式設計, 部分 ActionScript 3<br /><strong>參與技術:</strong> ASP.NET(VB.NET), ActionScript 3, Google Maps Flash API<br />                                      <strong>獲得獎項:</strong> 第十一屆網路金手指整合行銷類綜合項金獎,     2011 4AYahoo!創意獎 最佳互動網路活動獎-銅獎"
+},
+{
+    "id": "005",
+    "title": "爭鮮迴轉壽司 - 祭典篇",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 爭鮮, <strong>擔任:</strong> SA, 程式指導<br /><strong>參與技術:</strong> ASP.NET(C#), HTML5 Geolocation API<br />"
+},
+{
+    "id": "006",
+    "title": "爭鮮創意影音設計大賽",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 爭鮮, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> ASP.NET MVC 3, Facebook C# SDK<br />"
+},
+{
+    "id": "018",
+    "title": "舒跑杯 - 全民打卡讚出來",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 維他露, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> 手機版網頁, ASP.NET(C#), jQuery, HTML5 Geolocation<br />"
+},
+{
+    "id": "020",
+    "title": "美國運通簽帳金卡",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 美國運通, <strong>擔任:</strong> CSS 切版 Layout、前後端程式設計<br /><strong>參與技術:</strong> PSD to CSS 切版, jQuery, ASP.NET(C#)<br />"
+},
+{
+    "id": "007",
+    "title": "7-ELEVEn 涼夏季哆啦A夢轉彎風扇",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 7-ELEVEn, <strong>擔任:</strong> SA, 程式指導, 程式 Prototype 試作<br /><strong>參與技術:</strong> ASP.NET(C#), jQuery, Facebook ActionScript SDK, Facebook JavaScript SDK<br />"
+},
+{
+    "id": "008",
+    "title": "MAYBELLINE 30 秒打造妳的專屬眼線",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> MAYBELLINE, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> ASP.NET(C#), jQuery, Facebook JavaScript SDK<br />"
+},
+{
+    "id": "009",
+    "title": "Burt's Bees 夏日樂園",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> Burt's Bees, <strong>擔任:</strong> 程式設計、Flash 程式設計<br /><strong>參與技術:</strong> PHP, Facebook PHP SDK<br />"
+},
+{
+    "id": "010",
+    "title": "MEN EXPERT 吸力型男實驗室",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> L'OREAL, <strong>擔任:</strong> SA、程式指導、部分前端支援<br /><strong>參與技術:</strong> ASP.NET(C#), Facebook JavaScript SDK, jQuery<br />"
+},
+{
+    "id": "011",
+    "title": "SAN CHIANG VISUAL DESIGN",
+    "description": "<strong>Client:</strong> SAN CHIANG, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> PHP (CodeIgniter)<br />"
+},
+{
+    "id": "019",
+    "title": "活動網站架構一鍵產生器（ASP.NET）",
+    "description": "自創工具, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> WinForm (C#) 程式設計<br />"
+},
+{
+    "id": "012",
+    "title": "友樂町 - 全台第一個用生日、紀念日串起好友的社群網站",
+    "description": "<strong>Client:</strong> 畢業專題, <strong>擔任:</strong> 程式設計、切版<br /><strong>參與技術:</strong> PHP, jQuery<br />"
+},
+{
+    "id": "013",
+    "title": "御茶園。勇敢暢遊五大洲 百萬旅遊金挺你！",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 維他露, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> ASP.NET(VB.NET), Flash ActionScript 3, Titanium Mobile<br />"
+},
+{
+    "id": "014",
+    "title": "Yahoo! 2010 資訊月正妹揪團蓋大樓",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> Yahoo!, <strong>擔任:</strong> 程式設計<br /><strong>參與技術:</strong> PHP, Facebook ActionScript 3 SDK, Yahoo! BBAuth 串接<br />"
+},
+{
+    "id": "015",
+    "title": "得利 Let's Color Blog",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 得利塗料, <strong>擔任:</strong> SA, 程式指導<br /><strong>參與技術:</strong> ASP.NET(VB.NET &amp; C#), jQuery, Facebook C# SDK<br />"
+},
+{
+    "id": "016",
+    "title": "7Blog",
+    "description": "<strong>Agency:</strong> iPrefer, <strong>Client:</strong> 7-ELEVEn, <strong>擔任:</strong> SA, 程式指導<br /><strong>參與技術:</strong> ASP.NET(C#), jQuery, Facebook JavaScript SDK<br />"
+}]

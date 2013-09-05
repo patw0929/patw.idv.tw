@@ -1,0 +1,921 @@
+.portfolio-sprite, .portfolio-p001, .portfolio-p002, .portfolio-p003, .portfolio-p004, .portfolio-p005, .portfolio-p006, .portfolio-p007, .portfolio-p008, .portfolio-p009, .portfolio-p010, .portfolio-p011, .portfolio-p012, .portfolio-p013, .portfolio-p014, .portfolio-p015, .portfolio-p016, .portfolio-p017, .portfolio-p018, .portfolio-p019, .portfolio-p020, .portfolio-p021, .portfolio-p022, .portfolio-p023, .portfolio-p024 {
+  background: url('../img/portfolio-s6b37cc53a5.png') no-repeat; }
+
+.portfolio-p001 {
+  background-position: 0 -160px; }
+
+.portfolio-p002 {
+  background-position: 0 -560px; }
+
+.portfolio-p003 {
+  background-position: 0 -960px; }
+
+.portfolio-p004 {
+  background-position: 0 -1200px; }
+
+.portfolio-p005 {
+  background-position: 0 -880px; }
+
+.portfolio-p006 {
+  background-position: 0 -80px; }
+
+.portfolio-p007 {
+  background-position: 0 -320px; }
+
+.portfolio-p008 {
+  background-position: 0 -240px; }
+
+.portfolio-p009 {
+  background-position: 0 0; }
+
+.portfolio-p010 {
+  background-position: 0 -400px; }
+
+.portfolio-p011 {
+  background-position: 0 -1760px; }
+
+.portfolio-p012 {
+  background-position: 0 -1600px; }
+
+.portfolio-p013 {
+  background-position: 0 -640px; }
+
+.portfolio-p014 {
+  background-position: 0 -1280px; }
+
+.portfolio-p015 {
+  background-position: 0 -1520px; }
+
+.portfolio-p016 {
+  background-position: 0 -1680px; }
+
+.portfolio-p017 {
+  background-position: 0 -1040px; }
+
+.portfolio-p018 {
+  background-position: 0 -720px; }
+
+.portfolio-p019 {
+  background-position: 0 -1840px; }
+
+.portfolio-p020 {
+  background-position: 0 -800px; }
+
+.portfolio-p021 {
+  background-position: 0 -1120px; }
+
+.portfolio-p022 {
+  background-position: 0 -480px; }
+
+.portfolio-p023 {
+  background-position: 0 -1360px; }
+
+.portfolio-p024 {
+  background-position: 0 -1440px; }
+
+/*------------------------------------*\
+    $gallery-container
+
+    包覆作品展示區塊
+\*------------------------------------*/
+#gallery-container {
+  width: 1100px;
+  margin: 60px auto; }
+  @media screen and (max-width: 1200px) {
+    #gallery-container {
+      width: 100%; } }
+
+/*------------------------------------*\
+    $portfolio-content
+
+    作品主圖 與 簡介
+\*------------------------------------*/
+div.portfolio-content {
+  /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+  display: none;
+  float: right;
+  width: 550px;
+  background: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  padding: 5px 0;
+  background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(white), to(#f3f3f3), color-stop(0.1, white));
+  background: -webkit-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, white);
+  background: -moz-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, white);
+  background: -o-linear-gradient(0 0 270deg, #f3f3f3, #f3f3f3 10%, white);
+  -webkit-border-radius: 60px / 5px;
+  -moz-border-radius: 60px / 5px;
+  border-radius: 60px / 5px;
+  -webkit-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1) inset; }
+  div.portfolio-content a {
+    text-decoration: none;
+    color: #777; }
+    div.portfolio-content a:focus, div.portfolio-content a:hover, div.portfolio-content a:active {
+      text-decoration: underline; }
+  @media screen and (max-width: 1200px) {
+    div.portfolio-content {
+      float: none;
+      margin: 30px auto; } }
+  @media screen and (max-width: 910px) {
+    div.portfolio-content {
+      width: 90%;
+      border: 0;
+      background: transparent;
+      padding: 0;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; } }
+
+div.portfolio-content:before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  display: inline-block;
+  z-index: -1;
+  -webkit-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 10px -10px 8px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+  -moz-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+  -o-transform: rotate(2deg) translate(-14px, 20px) skew(-20deg);
+  transform: rotate(2deg) translate(-14px, 20px) skew(-20deg); }
+  @media screen and (max-width: 910px) {
+    div.portfolio-content:before {
+      display: none; } }
+
+div.portfolio-content:after {
+  content: '';
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  display: inline-block;
+  -webkit-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+  -moz-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+  -o-transform: rotate(2deg) translate(20px, 25px) skew(20deg);
+  transform: rotate(2deg) translate(20px, 25px) skew(20deg); }
+  @media screen and (max-width: 910px) {
+    div.portfolio-content:after {
+      display: none; } }
+
+@media screen and (max-width: 910px) {
+  div.portfolio-content a {
+    width: 32px;
+    height: 32px; } }
+
+	/*------------------------------------*\
+	    $slideshow-container
+
+	    主圖容器
+	\*------------------------------------*/
+@media screen and (max-width: 1200px) {
+  div.slideshow-container {
+    text-align: center; } }
+@media screen and (max-width: 910px) {
+  div.slideshow-container {
+    height: auto;
+    margin-bottom: 30px;
+    text-align: left; } }
+
+div.loader {
+  background-image: url(/js/nivoslider/dark/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 550px;
+  height: 400px;
+  /* This should be set to be at least the height of the largest image in the slideshow */ }
+
+div.slideshow span.image-wrapper {
+  display: block; }
+div.slideshow a.advance-link {
+  display: block;
+  width: 550px; }
+  div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+    text-decoration: none; }
+  @media screen and (max-width: 1200px) {
+    div.slideshow a.advance-link {
+      width: auto; } }
+  @media screen and (max-width: 910px) {
+    div.slideshow a.advance-link {
+      height: auto; } }
+div.slideshow img {
+  width: 530px;
+  max-height: 394px;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  margin: 10px; }
+@media screen and (max-width: 910px) {
+  div.slideshow {
+    text-align: center; }
+    div.slideshow img {
+      width: 90%;
+      max-width: 580px;
+      height: auto; } }
+
+	/*------------------------------------*\
+	    $caption-container
+
+	    簡介容器
+	\*------------------------------------*/
+div.caption-container {
+  font-size: 9pt;
+  margin: 0 auto 20px; }
+  @media screen and (max-width: 1200px) {
+    div.caption-container {
+      width: 100%; } }
+  @media screen and (max-width: 910px) {
+    div.caption-container {
+      width: 90%;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      background: #fff; } }
+
+span.image-caption {
+  display: block;
+  width: 550px; }
+  @media screen and (max-width: 1200px) {
+    span.image-caption {
+      width: 100%; } }
+
+div.caption {
+  padding: 12px; }
+
+div.image-title {
+  font-weight: bold;
+  font-size: 1.4em;
+  background-color: #C2C2A7;
+  line-height: 2em;
+  border-radius: 7px;
+  padding-left: 10px; }
+  @media screen and (max-width: 910px) {
+    div.image-title {
+      background-color: transparent;
+      line-height: inherit;
+      -webkit-border-radius: none;
+      -moz-border-radius: none;
+      -ms-border-radius: none;
+      -o-border-radius: none;
+      border-radius: none;
+      padding-left: 0; } }
+
+div.image-desc {
+  line-height: 1.7em;
+  padding-top: 12px;
+  display: block; }
+  @media screen and (max-width: 320px) {
+    div.image-desc {
+      display: none; } }
+
+/*------------------------------------*\
+    $navigation
+
+    縮圖列表
+\*------------------------------------*/
+div.navigation {
+  float: left;
+  width: 40%; }
+  @media screen and (max-width: 1200px) {
+    div.navigation {
+      width: 90%;
+      float: none;
+      margin: 0 auto; } }
+
+div.navigation a.thumb {
+  text-decoration: none;
+  color: #777;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left; }
+  @media screen and (max-width: 910px) {
+    div.navigation a.thumb {
+      width: 32px;
+      height: 32px; }
+      div.navigation a.thumb.portfolio-p001 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -61px; }
+      div.navigation a.thumb.portfolio-p002 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -221px; }
+      div.navigation a.thumb.portfolio-p003 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -381px; }
+      div.navigation a.thumb.portfolio-p004 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -477px; }
+      div.navigation a.thumb.portfolio-p005 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -349px; }
+      div.navigation a.thumb.portfolio-p006 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -29px; }
+      div.navigation a.thumb.portfolio-p007 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -125px; }
+      div.navigation a.thumb.portfolio-p008 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -93px; }
+      div.navigation a.thumb.portfolio-p009 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px 3; }
+      div.navigation a.thumb.portfolio-p010 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -157px; }
+      div.navigation a.thumb.portfolio-p011 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -701px; }
+      div.navigation a.thumb.portfolio-p012 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -637px; }
+      div.navigation a.thumb.portfolio-p013 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -253px; }
+      div.navigation a.thumb.portfolio-p014 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -509px; }
+      div.navigation a.thumb.portfolio-p015 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -605px; }
+      div.navigation a.thumb.portfolio-p016 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -669px; }
+      div.navigation a.thumb.portfolio-p017 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -413px; }
+      div.navigation a.thumb.portfolio-p018 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -285px; }
+      div.navigation a.thumb.portfolio-p019 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -733px; }
+      div.navigation a.thumb.portfolio-p020 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -317px; }
+      div.navigation a.thumb.portfolio-p021 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -445px; }
+      div.navigation a.thumb.portfolio-p022 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -189px; }
+      div.navigation a.thumb.portfolio-p023 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -541px; }
+      div.navigation a.thumb.portfolio-p024 {
+        -webkit-background-size: 32px;
+        -moz-background-size: 32px;
+        -o-background-size: 32px;
+        background-size: 32px;
+        width: 32px;
+        height: 32px;
+        background-position: 3px -573px; } }
+
+.ie8 div.navigation a.thumb.portfolio-p001 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p001.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p001.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p002 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p002.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p002.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p003 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p003.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p003.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p004 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p004.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p004.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p005 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p005.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p005.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p006 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p006.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p006.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p007 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p007.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p007.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p008 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p008.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p008.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p009 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p009.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p009.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p010 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p010.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p010.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p011 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p011.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p011.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p012 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p012.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p012.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p013 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p013.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p013.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p014 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p014.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p014.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p015 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p015.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p015.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p016 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p016.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p016.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p017 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p017.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p017.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p018 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p018.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p018.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p019 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p019.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p019.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p020 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p020.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p020.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p021 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p021.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p021.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p022 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p022.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p022.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p023 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p023.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p023.png',sizingMethod='scale')"; }
+
+.ie8 div.navigation a.thumb.portfolio-p024 {
+  background: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p024.png',sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/portfolio/p024.png',sizingMethod='scale')"; }
+
+ul.thumbs {
+  clear: both;
+  margin: 0;
+  padding: 0; }
+
+ul.thumbs li {
+  float: left;
+  padding: 0;
+  margin: 5px 10px 5px 0;
+  list-style: none; }
+
+a.thumb {
+  padding: 3px;
+  display: block;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #ccc;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+ul.thumbs li.selected a.thumb:focus {
+  outline: none; }
+ul.thumbs li.selected a.thumb:hover {
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  transform: rotate(-10deg); }
+
+ul.thumbs img {
+  border: none;
+  display: block;
+  width: 80px;
+  height: 80px; }
+  @media screen and (max-width: 910px) {
+    ul.thumbs img {
+      width: 100%;
+      height: 100%; } }
+
+/*------------------------------------*\
+    $section_work
+
+    作品燈箱
+\*------------------------------------*/
+#section_work {
+  left: 0;
+  position: absolute;
+  display: none;
+  top: 20px;
+  width: 100%;
+  z-index: 1111; }
+
+#loading {
+  display: none;
+  float: left;
+  height: 637px;
+  width: 100%; }
+
+.work_wrapper {
+  margin: 0 auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  -moz-box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  width: 85%;
+  max-width: 915px;
+  display: none; }
+  @media screen and (max-width: 910px) {
+    .work_wrapper {
+      width: 100%; } }
+
+#work_wrapper_ajax {
+  background-color: #222;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px #cccccc;
+  -moz-box-shadow: 0 0 20px #cccccc;
+  box-shadow: 0 0 20px #cccccc;
+  overflow: hidden;
+  *zoom: 1; }
+
+#link_desc {
+  float: left;
+  width: 550px;
+  padding: 20px; }
+  #link_desc p {
+    font-size: 10pt;
+    color: #9E9C9C;
+    letter-spacing: 3px; }
+  #link_desc em {
+    color: #79e81e;
+    font-style: normal; }
+  #link_desc .work_link {
+    color: #FFF;
+    font-size: 10pt;
+    display: inline-block;
+    margin-bottom: 15px;
+    -webkit-box-shadow: 0 10px 0 #823a17, 0 15px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 10px 0 #823a17, 0 15px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 0 #823a17, 0 15px 20px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 0 #823a17, 0 15px 20px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 8px 0 #823a17, 0 15px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 0 #823a17, 0 15px 20px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s east-in-out;
+    -moz-transition: all 0.2s east-in-out;
+    -o-transition: all 0.2s east-in-out;
+    transition: all 0.2s east-in-out; }
+    #link_desc .work_link span {
+      display: inline-block;
+      padding: 10px 15px;
+      line-height: 1;
+      background: #bb5422;
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhODI0NiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JiNTQyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+      background-size: 100%;
+      background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fa8246), color-stop(100%, #bb5422));
+      background-image: -webkit-linear-gradient(#fa8246, #bb5422);
+      background-image: -moz-linear-gradient(#fa8246, #bb5422);
+      background-image: -o-linear-gradient(#fa8246, #bb5422);
+      background-image: linear-gradient(#fa8246, #bb5422);
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px;
+      -webkit-transition: all 0.2s east-in-out;
+      -moz-transition: all 0.2s east-in-out;
+      -o-transition: all 0.2s east-in-out;
+      transition: all 0.2s east-in-out;
+      -webkit-box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.1) inset;
+      -moz-box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.1) inset;
+      box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.1) inset;
+      text-shadow: 0 -1px 1px rgba(19, 65, 88, 0.8); }
+    #link_desc .work_link:active {
+      -webkit-transition: -webkit-transform 0s ease-in-out;
+      -moz-transition: -moz-transform 0s ease-in-out;
+      -o-transition: -o-transform 0s ease-in-out;
+      transition: transform 0s ease-in-out; }
+      #link_desc .work_link:active span {
+        -webkit-transition: -webkit-transform 0s ease-in-out;
+        -moz-transition: -moz-transform 0s ease-in-out;
+        -o-transition: -o-transform 0s ease-in-out;
+        transition: transform 0s ease-in-out;
+        -webkit-transform: translate(0, 4px);
+        -moz-transform: translate(0, 4px);
+        -ms-transform: translate(0, 4px);
+        -o-transform: translate(0, 4px);
+        transform: translate(0, 4px); }
+  @media screen and (max-width: 910px) {
+    #link_desc {
+      float: left;
+      margin: 0 auto;
+      width: 60%; } }
+  @media screen and (max-width: 800px) {
+    #link_desc {
+      float: none;
+      margin: 0 auto;
+      width: 90%; } }
+
+#work_desc {
+  float: right;
+  width: 270px;
+  color: #9E9C9C;
+  overflow: auto;
+  position: relative;
+  margin-top: 40px; }
+  #work_desc h3 {
+    background: #FA8246;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhODI0NiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JiNTQyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fa8246), color-stop(100%, #bb5422));
+    background-image: -webkit-linear-gradient(#fa8246, #bb5422);
+    background-image: -moz-linear-gradient(#fa8246, #bb5422);
+    background-image: -o-linear-gradient(#fa8246, #bb5422);
+    background-image: linear-gradient(#fa8246, #bb5422);
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #FFF;
+    vertical-align: middle;
+    padding: 10px 0 10px 10px;
+    text-shadow: -1px 1px 1px black; }
+    @media screen and (max-width: 320px) {
+      #work_desc h3 {
+        font-size: 1em;
+        padding-bottom: 0; } }
+  #work_desc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    #work_desc ul li {
+      margin-bottom: 10px; }
+  #work_desc strong {
+    background: #FA8246;
+    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZhODI0NiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2JiNTQyMiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fa8246), color-stop(100%, #bb5422));
+    background-image: -webkit-linear-gradient(#fa8246, #bb5422);
+    background-image: -moz-linear-gradient(#fa8246, #bb5422);
+    background-image: -o-linear-gradient(#fa8246, #bb5422);
+    background-image: linear-gradient(#fa8246, #bb5422);
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 4px 10px;
+    color: #FFF;
+    text-shadow: -1px 1px 1px black;
+    letter-spacing: 2px;
+    width: 25%;
+    display: block;
+    float: left; }
+  #work_desc span {
+    display: block;
+    padding: 4px 10px;
+    background: #FFF;
+    width: 60%;
+    float: left;
+    margin-bottom: 10px; }
+  #work_desc select {
+    width: 100%; }
+  #work_desc .work_link {
+    color: #2d8ce2;
+    font-size: 11pt;
+    font-weight: bold;
+    line-height: 21px;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    z-index: 50; }
+  #work_desc a:hover {
+    color: #FFF; }
+  @media screen and (max-width: 1200px) {
+    #work_desc {
+      width: 30%;
+      padding: 0;
+      font-size: 9pt;
+      float: right; }
+      #work_desc strong {
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px; }
+      #work_desc span {
+        background: none; }
+      #work_desc .work_link {
+        display: none; } }
+  @media screen and (max-width: 800px) {
+    #work_desc {
+      display: none; } }
+
+#work_desc_txt {
+  font-size: 10pt;
+  letter-spacing: 3px; }
+  @media screen and (max-width: 910px) {
+    #work_desc_txt {
+      width: 100%;
+      font-size: 9pt; } }
+
+.pro_link_wrap {
+  float: left;
+  width: 550px; }
+
+#btn_close {
+  background: url('../img/close.png?1345370440') bottom;
+  display: block;
+  float: right;
+  height: 31px;
+  position: absolute;
+  right: 20px;
+  text-indent: -9999px;
+  bottom: 20px;
+  width: 35px;
+  z-index: 50; }
+  #btn_close:hover {
+    background-position: top; }
+  @media screen and (max-width: 910px) {
+    #btn_close {
+      float: left;
+      right: auto;
+      top: 20px;
+      bottom: auto;
+      left: 20px; } }

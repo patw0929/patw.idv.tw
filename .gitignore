@@ -1,0 +1,8 @@
+.DS_Store*
+Thumbs.db
+.sass-cache
+build_*
+fire_app_log.txt
+temp.txt
+portfolio/023/*
+min/
