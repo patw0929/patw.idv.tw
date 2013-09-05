@@ -500,29 +500,36 @@ nav {
     overflow: hidden;
     *zoom: 1; }
     #about #profile_name {
-      top: 100px;
+      position: static;
+      margin-top: 100px;
       padding-left: 20px; }
     #about #profile_picture {
       left: 200px;
       top: 110px; }
     #about #profile_intro {
       position: static;
-      margin: 150px 30px auto;
+      margin: 30px 30px auto;
       width: 80%;
       font-size: 1.3em;
-      float: left; }
+      float: left;
+      display: block;
+      opacity: 1; }
     #about #profile_skills {
       position: static;
       float: left;
       width: 80%;
       margin: 20px 30px;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      display: block;
+      opacity: 1; }
     #about #profile_experience {
       position: static;
       float: left;
       width: 80%;
       margin: 0 30px;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      display: block;
+      opacity: 1; }
     #about #cloud2 {
       display: none; } }
 @media screen and (max-width: 910px) {

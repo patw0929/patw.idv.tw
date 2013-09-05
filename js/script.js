@@ -334,8 +334,8 @@ $(function () {
         mouseOut: function (e) {
 
             var $this = $(e.currentTarget);
-            var thisMenu = $this.find('a').attr('href').replace('#', '');
-            if (menu !== thisMenu) {
+            var thisMenu = $this.find('a').attr('href');
+            if (thisMenu !== undefined && menu !== thisMenu.replace('#', '')) {
                 $this.removeClass("on");
             }
 
@@ -374,9 +374,6 @@ $(function () {
                 $(this).data('Xposition', $(this).attr('data-Xposition'));
                 $(this).data('speed', $(this).attr('data-speed'));
             });
-
-            $("#profile_intro").hide();
-
 
         },
         render: function () {

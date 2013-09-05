@@ -576,7 +576,8 @@ nav {
         @include clearfix;
 
         #profile_name {
-            top: 100px;
+        	position: static;
+            margin-top: 100px;
             padding-left: 20px;
         }
 
@@ -587,10 +588,12 @@ nav {
         
         #profile_intro {
             position: static;
-            margin: 150px 30px auto;
+            margin: 30px 30px auto;
             width: 80%;
             font-size: 1.3em;
             float: left;
+            display: block;
+            opacity: 1;
         }
         
         #profile_skills {
@@ -599,6 +602,8 @@ nav {
             width: 80%;
             margin: 20px 30px;
             font-size: 1.2em;
+            display: block;
+            opacity: 1;
         }
         
         #profile_experience {
@@ -607,6 +612,8 @@ nav {
             width: 80%;
             margin: 0 30px;
             font-size: 1.2em;
+            display: block;
+            opacity: 1;
         }
         
         #cloud2 {
